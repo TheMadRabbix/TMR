@@ -1,0 +1,253 @@
+:root {
+    --blu: #1ae5f7;
+    --blk: rgb(0, 0, 0);
+    --gray:rgb(173, 173, 173);
+    --pur: #880ED4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* navbar section start  */
+.header{
+    background-color: var(--pur);
+}
+.mk-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #151617; */
+    padding: 1rem 1.5rem;
+}
+
+.hamburger{
+    display: none;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #000;
+}
+.mk-digital-clock{
+    font-size: 25px;
+    text-align: center;
+}
+.mk-nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mk-nav-item{
+    list-style: none;
+    margin-left: 3rem;
+}
+
+.mk-nav-link{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;  /* Nav link color */
+}
+
+.mk-nav-link:hover{
+    color: var(--blk);
+}
+
+.nav-logo{
+    width: 120px;
+    height: 100px;
+}
+#display{
+    color: white;
+}
+/* navbar section end  */
+
+/* home section start  */ 
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #292626; */
+}
+.home-col1{                          /*col1 section*/
+    /* background-color: red; */
+    padding: 50px;
+    width:auto;
+    height: 600px;
+}
+.home-col1-title h1{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+.home-col1-title h1 span{
+    color: var(--red);
+}
+.home-col1-text{
+    padding: 0 10px 0 10px;
+    background-color: rgba(15, 15, 19, 0.652);
+    border-radius: 10px;
+}
+.home-col1-text h1{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    color: #fff;
+}
+.home-col1-text h1 span{
+color: var(--red);
+}
+.home-col1-text h3{
+    color: #fff;
+    text-align: center;
+    padding-bottom: 30px;
+    line-height: 2;
+}
+
+.home-col2{                 /*Col2 section*/
+    padding: 50px;
+    width:auto;
+    height: auto;
+}
+
+#memo-date{        /*Memo date section*/  
+    margin-top: 10px;
+}
+.row1,.row2{
+    margin-bottom: 20px;
+}
+#memo-date p{
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* copyright autoyear  */
+#autoyear{
+    color: var(--red);
+}
+.mk-autoyear{
+    margin-top: 20px;
+    padding: 10px;
+}
+/* scrolling top section  */
+.arrow{
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 80vh;
+    color: #fff;
+    background-color: var(--pur);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    position: fixed;
+    bottom: 50px;
+    right: 2rem;
+    z-index: 100;
+    /* display: none; */
+}
+.arrow:hover{
+    background-color: var(--blk);
+    color: var(--pur);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for responsive nav bar  */
+@media only screen and (max-width: 668px){
+    .mk-nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 0.5rem;
+        flex-direction: column;
+        background-color: #1a1919c9;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+
+    .mk-nav-menu.active{
+        left: 0;
+    }
+
+    .mk-nav-item{
+        margin: 2.5rem 0;
+
+    }
+    .mk-nav-link{
+        color: #fff;
+    }
+    .mk-nav-link:hover{
+        color: var(--blu);
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .bar{
+        background-color: #000;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
